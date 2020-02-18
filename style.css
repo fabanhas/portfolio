@@ -2,16 +2,70 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
+body{position: relative;}
+/* config das seções que irão ficar intercalando entre si */
+.sec-transition{
+    position: absolute;
+    width: 100%;
+}
+.sec-transition.escondida-updown{
+    height: 0;
+    width: 100%;
+}
+.sec-transition.escondida-leftright{
+    width: 0;
+    height: 100vh;
+}
+.sec-transition.escondida .full{
+    display: none;
+}
 #first{
     background-color: rgb(123, 94, 162);
+    color: white;
+    position: relative;
+    z-index: 1;
 }
-#first > .container{
+#second{
+    background-color: yellow;
+    transition: all .7s;
+    right: -100%;
+}
+.sec-transition.start{
+    z-index: 999;
+    opacity: 1;
+    display: block;
+}
+.sec-transition.start.left{
+    left: 0 !important;
+    width: 100%;
+}
+.sec-transition.start.right{
+    right: 0 !important;
+    width: 100%;
+}
+.sec-transition.start.bottom{
+    bottom: 0 !important;
+    height: 100vh;
+}
+.sec-transition.start.top{
+    top: 0 !important;
+    height: 100vh;
+}
+/* end of config */
+
+
+
+.full{
     display: flex;
    justify-content: center;
    align-items: center;
    flex-flow: column wrap; 
-   height: 100vh;
-   color: white;
+   opacity: 0;
+   transition: opacity .7s;
+}
+.full.show{
+    height: 100vh;
+    opacity: 1;
 }
 #first > .container > .cursive{
     font-size: 72px;
@@ -21,6 +75,23 @@
 }
 #first > .container > h2{
     font-weight: 600;
+}
+.btn-seta{
+    color: #fff;
+    position: absolute;
+    font-size: 30px;
+}
+.btn-down{
+    bottom: 5px;
+}
+.btn-up{
+    top: 5px;
+}
+.btn-right{
+    right: 5px;
+}
+.btn-left{
+    left: 5px;
 }
 @media screen and (max-width: 768px){
     #first > .container > .cursive{
