@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Yellowtail|Montserrat:400,600|&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+#first{
+    background-color: rgb(123, 94, 162);
+}
+#first > .container{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: column wrap; 
+   height: 100vh;
+   color: white;
+}
+#first > .container > .cursive{
+    font-size: 72px;
+}
+.cursive{
+    font-family: 'Yellowtail', cursive;
+}
+#first > .container > h2{
+    font-weight: 600;
+}
+@media screen and (max-width: 768px){
+    #first > .container > .cursive{
+        font-size: 40px;
+    }
+}
