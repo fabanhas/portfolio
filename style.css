@@ -78,20 +78,10 @@ body{position: relative;}
 }
 .btn-seta{
     color: #fff;
-    position: absolute;
     font-size: 30px;
 }
-.btn-down{
-    bottom: 5px;
-}
-.btn-up{
-    top: 5px;
-}
-.btn-right{
-    right: 5px;
-}
-.btn-left{
-    left: 5px;
+.btn-seta:hover{
+    color: #540fb1;
 }
 @media screen and (max-width: 768px){
     #first > .container > .cursive{
